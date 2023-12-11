@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find factors</title>
+</head>
+<body>
+    <script>
+        while(true){
+            var listFactors=[];
+            let userNumber = prompt('Please enter a number to find all its factors');
+            let num = parseInt (userNumber);
+
+            if (isNaN(userNumber)){
+                window.alert(`You entered ${userNumber} which is not a number. Please try again.`)
+                continue;
+            }
+            else{
+                for (let i=1 ; i <= num ; i++){
+                    if (num % i == 0){
+                        listFactors.push(i);
+                    }
+                }
+                window.alert(`All factors of ${num} are: ${listFactors}`)
+            }
+            let decision=prompt('Would you like to enter another number? Please enter y/n: ');
+            if(decision=='y'){
+                continue;
+            }
+            else{
+                window.alert('You have left the program!');
+                break;  
+            }
+        }
+    </script>
+    
+</body>
+</html>
